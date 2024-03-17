@@ -509,7 +509,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title"><span class="dnerf">RepoFormer</span>: Selective Retrieval
+                    <h1 class="title is-1 publication-title"><span class="dnerf">Repoformer</span>: Selective Retrieval
                         for Repository-Level Code
                         Completion</h1>
                     <div class="is-size-5 publication-authors">
@@ -561,7 +561,7 @@
                                                                         d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
                       <!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
                   </span>
-                  <span>Code</span>
+                  <span>Code and Model coming soon!</span>
                   </a>
               </span>
                             <!-- Model Link. -->
@@ -576,6 +576,134 @@
     </div>
 </section>
 
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- <h2 class="title is-3">Abstract</h2> -->
+          <div class="content has-text-justified">
+            <p>
+                We introduce a framework for completing the code in your repository more accurately while bringing near 100% speedup compared to previous RAG-based methods. The framework is powered by <b><span class="dnerf">Repoformer</span></b>, a fine-tuned code LM capable of self-evaluating whether repository-level retrieval is required, selectively trigger retrieval, and robustly leverage the retrieved contexts. Our <b><span class="dnerf">Repoformer-3B</span></b> performs on par compared to state-of-the-art repository-level code completion system with StarCoder (16B).
+            </p>
+            <p>Key features:</p>
+            <ul>
+                <li><strong>Performance-oriented selective retrieval.</strong> Repository-level retrieval is informative yet very costly. <b><span class="dnerf">Repoformer</span></b> learns to trigger it only when it is likely to improve code completion (see below). </li>
+                <li><strong>Enhanced robustness to retrieved contexts. </strong>  <b><span class="dnerf">Repoformer</span></b> learns to extract the most important information from retrieval, avoiding being distracted by irrelevant context.  </li>
+                <li><strong>Self-supervision.</strong> The training process of <b><span class="dnerf">Repoformer</span></b> is purely self-supervised.  </li>
+                <li><strong>Generalizability.</strong> We show that our framework greatly improves the accuracy and inference latency on various completion granularity and languages. <b><span class="dnerf">Repoformer</span></b> can serve well as a plug-and-play retrieval policy for RAG systems with different black-box code LMs as the generation model.</li>
+            </ul>
+            <img src="src/figure_1.png" class="center">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Motivation</h2>
+          <div class="content has-text-justified">
+            <p>
+                Recent work has revealed successful stories of retrieval-augmented generation (RAG) for repository-level code completion. In this work, we rethink a crucial assumption:
+                <center><b><em>Should we always perform retrieval augmentation?</em></b></center>
+            </p>
+            <p>We ask this question based on two observations.</p>
+            <p>First, the performance improvement from retrieval is often sparse. Take API completion from RepoEval as an example, for various code LMs, only 20% of the retrieval actually improve their performance. </p>
+            <img src="src/figure_3.png" class="center">
+            <p>Second, always retrieving introduces notable inefficiencies. The size of retrieval index grows linearly with the number of lines in the repository. For moderately sized repositories, sparse retrieval is already as time consuming as completion with a 3B LM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--/ Abstract. -->
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+            <h2 class="title is-3">Approach</h2>
+            <div class="content has-text-justified">
+            <p>
+                Our framework is centered on the <b>selective RAG</b> idea: the system decides whether the LM’s generation could benefit from retrieved contexts and abstains from retrieval augmentation when unnecessary (Figure 1 (a)). We further consider the <b>self-selective RAG</b> setting, where the LM self-decides when to retrieve, operationalized as an extension to fill-in-the-middle language modeling.
+            </p>
+            <center><img src="src/figure_2.png" class="center" width="500px"></center>
+            <p>We highlight the advantages of this formulation:</p>
+            <ul>
+                <li><b>Flexibility</b>: The LM can seamlessly self-switch between RAG and fill-in-the-middle when encountering different questions. Users can easily adjust the ratio between the two through a retrieval threshold on the probability of &ltCC&gt.</li>
+                <li><b>Efficiency</b>:The selective decision overhead is only a single forward pass. When the LM abstains from retrieval, it can directly proceed with generation and the retrieval overhead is completely avoided.
+            </ul>
+            <p><b>Training data creation. </b>We leverage large-scale permissively licensed repositories from the Stack and create the fine-tuning data via a three-step procedure:</p>
+            <ul>
+                <li><b>Sample</b> target lines that are either (1) random code chunks of varied lengths or (2) function bodies</li>
+                <li><b>Retrieve</b> cross-file repository-level contexts CC using the current file, with or without the target lines. </li>
+                <li><b>Label</b> whether extending the current file with CC can improve a code LM’s code completion quality. </li>
+            </ul>
+            <p>Note that this label essentially encapsulates two factors for abstention: (1) the LM already knowing the answer without retrieval and (2) the code completion question not depending on cross-file information to answer and thus retrieval is likely uninformative.</p>
+            <p><b>Training objective. </b>We jointly fine-tune the model for self-assessment and code completion.</p>
+            <center><img src="src/training_objective.png" class="center" width="500px"></center>
+            <p>Following this recipe, we fine-tune StarCoderBase on Python and multilingual repositories from the Stack to obtain the <b><span class="dnerf">Repoformer-1B/3B/7B</span></b> models. </p> 
+        </div>
+        </div>
+        </div>
+    </div>
+    
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+            <h2 class="title is-3">Evaluation</h2>
+            <div class="content has-text-justified">
+            <p><b><span class="dnerf">Repoformer</span></b> achieves <b>strong code completion performance</b> via selective RAG.  <b><span class="dnerf">Repoformer-3B</span></b> outperforms StarCoderBase-7B on most of the tasks and metrics, even outperforming the 5x larger StarCoder in terms of ES for API and chunk completion. In our paper, we also show that the performance improvement from our paradigm can generalize to multiple languages and retrievers.</p>
+            <img src="src/main_eval_results.png" class="center">
+            <br><br>
+            <p><b><span class="dnerf">Repoformer</span></b> <b> greatly improves inference efficiency. </b>For the first time, we rigorously consider the latency of repository-level code completion of the entire RAG pipeline. In the self-selective RAG setting, we find <b><span class="dnerf">Repoformer</span></b> saves the inference latency by up to 70% without sacrificing the accuracy. </p>
+            <center><img src="src/latency-self.png" class="center" width="500px"></center>
+            <p>More importantly, we show that <b><span class="dnerf">Repoformer</span></b> serves well as a <b>plug-and-play</b> selective RAG policy for RAG pipelines instantiated with other larger code LMs as the generation model. For these models, we similarly observe that  <b>selective RAG improves the accuracy while reducing the inference latency.</b></p>
+            <center><img src="src/latency-transfer.png" class="center" width="500px"></center>
+            </div>
+        </div>
+        </div>
+    </div>
+        <!--/ Abstract. -->
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+            <h2 class="title is-3">Analysis</h2>
+            <div class="content has-text-justified">
+            <p><b><span class="dnerf">Repoformer</span> makes accurate abstention decisions</b>. As shown below, we find over 85% of the abstention decisions are accurate, that the model's performance cannot be improved via retrieval. </p>
+            <center><img src="src/selective_decision_accuracy.png" class="center" width="500px"></center>
+            <br><br>
+            <p><b><span class="dnerf">Repoformer</span> is more robust to retrieval</b>. Compared to the StarCoderBase model before fine-tuning, we find <b><span class="dnerf">Repoformer</span></b> exhibiting strong ability to leverage the retrieved contexts. </p>
+            <center><img src="src/retrieval_robustness.png" class="center" width="500px"></center>
+            <br><br>
+            <p><b><span class="dnerf">Repoformer</span> is robust to threshold selections</b>. In practice, a retrieval threshold is required to make the retrieval decisions. In the paper, we use the same threshold setting and find that <b><span class="dnerf">Repoformer</span></b> provides decent accuracy-latency trade-offs at a wide range of thresholds. </p>
+            <center><img src="src/latency-threshold-tradeoff-3b.png" class="center"></center>
+            <br>
+            <p>We provide further analyses on generalization, latency, as well as ablations of the training designs. For the details, please refer to our paper.</p>
+        </div>
+        </div>
+        </div>
+    </div>
+        <!--/ Abstract. -->
+        
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{Repoformer,
+    title={Repoformer: Selective Retrieval for Repository-level Code Completion},
+    author={Di Wu, Wasi Uddin Ahmad, Dejiao Zhang, Murali Krishna Ramanathan, Xiaofei Ma},
+    url={https://arxiv.org/abs/},
+    year={2024},
+  }</code></pre>
+</div>
+  </section>
+ 
 
 <footer class="footer">
     <div class="container">
@@ -599,7 +727,7 @@
         </div>
     </div>
 </footer>
-
+ 
 
 </body>
 </html>
